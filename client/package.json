@@ -3,30 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.21",
+    "@types/classnames": "2.2.3",
     "@types/node": "^12.20.6",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "@types/react-query": "1.1.2",
+    "@types/react-transition-group": "4.4.1",
+    "@types/webfontloader": "1.6.29",
+    "axios": "0.21.1",
+    "classnames": "2.2.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hook-form": "6.15.5",
+    "react-query": "3.13.0",
+    "react-query-devtools": "2.6.3",
     "react-scripts": "4.0.3",
+    "react-transition-group": "4.4.1",
     "typescript": "^4.2.3",
-    "web-vitals": "^1.1.1"
+    "webfontloader": "1.6.28"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
+    "build:css": "postcss src/assets/styles/tailwind.css -o src/assets/styles/main.css",
+    "watch:css": "postcss src/assets/styles/tailwind.css -o src/assets/styles/main.css"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -39,5 +42,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.4"
   }
 }
