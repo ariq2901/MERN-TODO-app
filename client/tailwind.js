@@ -18,6 +18,8 @@ module.exports = {
 
       black: colors.black,
       white: colors.white,
+      darkPurple: "#140A26",
+
       gray: colors.coolGray,
       red: colors.red,
       yellow: colors.amber,
