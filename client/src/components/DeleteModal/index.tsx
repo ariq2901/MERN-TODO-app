@@ -10,10 +10,10 @@ const DeleteModal: React.FC = () => {
     >
       <div className="flex flex-col h-full justify-between">
         <section className="flex flex-row justify-between">
-          <p className="text-darkPurple text-sm subpixel-antialiased tracking-wide font-bold whitespace-normal">
+          <div className="text-darkPurple text-sm subpixel-antialiased tracking-wide font-bold whitespace-normal">
             {"This task is not completed, delete?"}
             <p className="text-2xl">&#128540;</p>
-          </p>
+          </div>
 
           <CloseIcon />
         </section>

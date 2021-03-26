@@ -11,9 +11,9 @@ type Props = {
 const TaskCard: React.FC<Props> = ({ title }) => {
   return (
     <div className="flex justify-center items-center relative rounded shadow-lg p-4 mb-2 bg-white">
-      <p className="flex-1 text-sm subpixel-antialiased tracking-wide font-bold whitespace-normal truncate">
+      <div className="flex-1 text-sm subpixel-antialiased tracking-wide font-bold whitespace-normal truncate">
         {title}
-      </p>
+      </div>
 
       <div className="flex text-darkPurple">
         <span>
@@ -24,7 +24,7 @@ const TaskCard: React.FC<Props> = ({ title }) => {
         </span>
       </div>
 
-      <DeleteModal />
+      {/* <DeleteModal /> */}
     </div>
   );
 };
